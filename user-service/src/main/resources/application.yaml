@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: user-service
+#  security:
+#    oauth2:
+#      resourceserver:
+#        jwt:
+#          issuer-uri: http://localhost:8080/realms/avocatice-realm
+#          jwk-set-uri: http://localhost:8080/realms/avocatice-realm/protocol/openid-connect/certs
+  config:
+    import: optional:configserver:http://localhost:8888
+#jwt:
+#  auth:
+#    converter:
+#      resource-id: users-client
+#      principal-attribute: preferred_username
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+server:
+  port: '8082'
